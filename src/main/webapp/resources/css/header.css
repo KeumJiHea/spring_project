@@ -1,0 +1,9 @@
+@charset "UTF-8";
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+.wrap {width: 800px; margin: auto; text-align: center; align-items: center;}
+.footer {text-align: center;}
+.wrap header h1 {font: bolder; font-size: xx-large; text-align: center;}
+.title {text-align: center;}
+.content {text-align: center;}
+.titles .title {text-align: left;}
+table {width: 600px; margin: auto;}
