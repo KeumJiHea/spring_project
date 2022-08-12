@@ -39,6 +39,7 @@ public class BoardController {
 	
 	@GetMapping("/writeForm")
 	public String writeForm() {
+		System.out.println("write 메소드 실행");
 		return "board/writeForm";
 	}
 	

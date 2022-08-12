@@ -34,9 +34,18 @@
 			</tr>
 		</c:if>
 	</table>
-	<button class="button is-primary" id="writeButton" onclick="location.href='${contextPath }/board/writeForm'">
-		새 글 작성
-	</button>
+	<div class="button">
+		<button class="button is-primary" id="writeButton" onclick="location.href='${contextPath }/board/writeForm'">
+			새 글 작성
+		</button>
+	</div>
+
+	<div class="paging">
+		<c:forEach var="num" begin="1" end="${repeat }">
+			<a href="${contextPath }/board/board?num=${num}">${num } </a>
+		</c:forEach>
+	</div>
+	
 </section>
 
 <%@ include file="../default/footer.jsp" %>

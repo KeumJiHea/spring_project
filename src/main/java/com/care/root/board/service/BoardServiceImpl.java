@@ -24,6 +24,7 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 	public void getBoardList(Model model, int num) {
+		System.out.println("getBoardList 실행");
 		int pageLetter = 3;
 		int allCount = mapper.selectBoardCount();
 		
@@ -38,6 +39,7 @@ public class BoardServiceImpl implements BoardService {
 		model.addAttribute("repeat", repeat);
 		
 		ArrayList<BoardDTO> list = mapper.getBoardList(start, end);
+		
 		if(list.isEmpty()) {
 			model.addAttribute("list", "null");
 		}else {

@@ -16,7 +16,7 @@
 	
 	<select id="getBoardList" resultMap="board">
 		select B.* from(select rownum rn, A.* from
-		(select * from mvc_board order by write_no desc)A)B
+		(select * from mvc_board order by write_no desc)A)B 
 		where rn between #{s} and #{e}
 	</select>
 	
@@ -56,7 +56,7 @@
 	</select>
 	
 	<select id="selectBoardCount" resultType="Integer">
-		select count(*) from mvc_board;
+		select count(*) from mvc_board
 	</select>
 
 </mapper>
