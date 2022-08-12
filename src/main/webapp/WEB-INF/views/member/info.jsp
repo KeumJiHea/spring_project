@@ -28,11 +28,8 @@ function pwdchg(){
 <c:set var="addr2" value="${addr[1] }"/>
 <c:set var="addr3" value="${addr[2] }"/>
 
-<div class="wrap">
-	<div class="titles">
-		<h2 class="title">My Page</h2>
-		<h2 class="subtitle">${dto.id }정보</h2>
-	</div>	
+<section>
+	<h2 class="title">My Page</h2>
 	<form action="modify" method="post" onsubmit="pwdChange()">
 	
 		<div class="field">
@@ -87,7 +84,7 @@ function pwdchg(){
 		</div>
 		
 	</form>
-</div>
+</section>
 <script type="text/javascript">
 if('${dto.id}'=='${loginUser}'){
 	var btns = document.getElementById("btns");

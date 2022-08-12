@@ -11,8 +11,8 @@
 </head>
 <body>
 <%@ include file="../default/header.jsp" %>
-<div class="wrap">
-	<h2>게시판</h2>
+<section>
+	<h2 class="title">게시판</h2>
 	<table class="table is-striped">
 		<tr>
 			<th>번호</th><th>아이디</th><th>제목</th>
@@ -20,24 +20,24 @@
 		</tr>
 		
 		<c:if test="${list != 'null' }">
-			<tr>
-				<c:forEach var="dto" items="${list }">
-					<td>${dto.writeNo }</td><td>${dto.id }</td><td>${dto.title }</td>
-					<td>${dto.savedate }</td><td>${dto.hit }</td><td>${dto.imageFileName }</td>
-				</c:forEach>
-			</tr>
+			<c:forEach var="dto" items="${list }">
+				<tr>
+					<td>${dto.writeNo }</td><td>${dto.id }</td>
+					<td><a href="${contextPath }/board/contentView?writeNo=${dto.writeNo}">${dto.title }</a></td>
+					<td>${dto.savedate }</td><td id="hit">${dto.hit }</td><td>${dto.imageFileName }</td>
+				</tr>
+			</c:forEach>
 		</c:if>
 		<c:if test="${list == 'null' }">
 			<tr>
 				<td colspan="6">등록된 글이 없습니다.</td>
 			</tr>
 		</c:if>
-	
-		<tr>
-			<td colspan="6"><a href="${contextPath }/board/writeForm">글 작성</a></td>
-		</tr>
 	</table>
-</div>
+	<button class="button is-primary" id="writeButton" onclick="location.href='${contextPath }/board/writeForm'">
+		새 글 작성
+	</button>
+</section>
 
 <%@ include file="../default/footer.jsp" %>
 </body>

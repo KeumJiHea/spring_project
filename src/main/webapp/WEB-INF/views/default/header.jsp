@@ -12,8 +12,9 @@
 <link rel="stylesheet" href="${contextPath }/resources/css/header.css?after">
 </head>
 <body>
-<header class="header">
-	<h1 onclick="location.href='${contextPath }/index'" style="cursor: pointer;">CARE LAB</h1>
+<div id="wrap">
+<header>
+	<h1 class="header" onclick="location.href='${contextPath }/index'" style="cursor: pointer;">CARE LAB</h1>
 
 	<nav class="navbar is-white" role="navigation" aria-label="main navigation">
 		<div class="navbar-brand">
@@ -57,4 +58,3 @@
 	</nav>
 </header>
 </body>
-</html>

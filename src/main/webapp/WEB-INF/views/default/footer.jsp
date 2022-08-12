@@ -1,4 +1,3 @@
-<html>
 <footer class="footer">
 	<div class="content has-text-centered">
 		<address>
@@ -6,4 +5,5 @@
 		</address>
 	</div>
 </footer>
+</div>
 </html>

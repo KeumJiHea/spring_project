@@ -16,7 +16,7 @@
 </script>
 <body>
 
-<div class="wrap">
+<section>
 	<form action="write" method="post" class="box" enctype="multipart/form-data">
 			<div class="field">
 				<label class="label">
@@ -62,8 +62,7 @@
 				</button>
 			</div>
 		</form>
-</div>
-
+</section>
 
 </body>
 </html>

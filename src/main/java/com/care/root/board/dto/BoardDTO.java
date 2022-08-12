@@ -1,11 +1,11 @@
 package com.care.root.board.dto;
 
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 
 public class BoardDTO {
 	private int writeNo, hit;
-	private String title, content, imageFileName, id;
-	private Timestamp savedate;
+	private String title, content, imageFileName, id, savedate;
 	
 	public int getWriteNo() {
 		return writeNo;
@@ -43,10 +43,11 @@ public class BoardDTO {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public Timestamp getSavedate() {
+	public String getSavedate() {
 		return savedate;
 	}
 	public void setSavedate(Timestamp savedate) {
-		this.savedate = savedate;
+		SimpleDateFormat s = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
+		this.savedate = s.format(savedate);
 	}
 }
